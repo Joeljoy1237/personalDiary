@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-image: url(../image/background.png);
+  font-weight: 100;
+  background-attachment: fixed;
+  font-size: large;
+}
+.top-head-div {
+  position: relative;
+  padding: 20px 30px 20px;
+  background-color: #e8d031;
+}
+.top-head {
+ 
+  text-align: center;
+  display: inline;
+}
+.sidehead {
+  position: absolute;
+  left: 90%;
+}
+.fixed-bottom{
+  left: 90;
+}
+#plus {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+}
+.main-content p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+#trash{
+  cursor: pointer
+}

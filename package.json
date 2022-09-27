@@ -1,0 +1,22 @@
+{
+  "name": "v3",
+  "version": "1.0.0",
+  "description": "Personal Diary",
+  "main": "app.js",
+  "scripts": {
+    "start": "start chrome http://localhost:3000 & nodemon app.js"
+  },
+  "author": "Joel Joy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.5.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2"
+  }
+}

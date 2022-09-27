@@ -1,0 +1,17 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.form-body {
+  width: 33%;
+  margin: 7% auto;
+}
+.input-group {
+  padding: 10px 0;
+}
+.btn {
+  margin: auto;
+}
+h1 {
+  padding-top: 8%;
+  text-align: center;
+}
