@@ -10,27 +10,32 @@ body {
 }
 .top-head-div {
   position: relative;
-  padding: 20px 30px 20px;
+  padding: 20px 20px 20px;
   background-color: #e8d031;
 }
 .top-head {
- 
   text-align: center;
   display: inline;
 }
 .sidehead {
+  right: 2%;
   position: absolute;
-  left: 90%;
-}
-.fixed-bottom{
-  left: 90;
 }
 #plus {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
   height: 50px;
   width: 50px;
+  display: inline-block;
   background-color: red;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.text-center{
+  vertical-align:baseline;
+  margin: auto;
 }
 
 .main-content {
@@ -45,6 +50,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
-#trash{
-  cursor: pointer
+.trash{
+  cursor: pointer;
 }

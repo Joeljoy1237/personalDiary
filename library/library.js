@@ -10,7 +10,7 @@ function dateNow() {
     let month = months[d.getMonth()];
     let date = d.getDate();
     let year = d.getFullYear()
-    return `${month} ${date} ${year}`;
+    return `${month} ${date}, ${year}`;
 }
 
 function cryptoEncrypt(text) {

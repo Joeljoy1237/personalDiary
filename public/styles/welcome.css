@@ -97,4 +97,5 @@ margin: 1.5%;
   display: flex;
   justify-content: center;
   font-size: large;
+  display: none;
 }

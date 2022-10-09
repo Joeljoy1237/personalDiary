@@ -32,16 +32,15 @@
                 <p>
                     <%=data.body%>
                 </p>
-                <i id="trash" class="fa">&#xf1f8;</i>
+                <i class="trash fa">&#xf1f8;</i>
             </div>
             <% }) %>
 
     </div>
 
-    <div class="justify-content-end fixed-bottom" style="left: 90px; ;">
-        <div id="plus" class="">
-            <h1 class="text-center">+</h1>
-        </div>
+
+    <div id="plus" class="text-center">
+        <h1>+</h1>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -52,21 +51,41 @@
             window.location.href = `${window.location.origin}/compose`;
         });
 
-        $("#trash").click(function (event) {
-            console.log("Hai");
-            console.info(event.target.parentNode.id)
+        // $(".trash").click(function (event) {
+        //     console.log("Hai");
+        //     console.info(event.target.parentNode.id)
 
 
-            $.post("/delete", { id: event.target.parentNode.id }, function (data, status) {
-                if (status && !data.ok) {
-                    alert("there was some error!")
-                } else {
-                    $("#cont").load(window.location.href + " #cont");
-                }
+        //     $.post("/delete", { id: event.target.parentNode.id }, function (data, status) {
+        //         if (status && !data.ok) {
+        //             alert("there was some error!")
+        //         } else {
+        //             $("#cont").load(window.location.href + " #cont");
+        //         }
+        //     });
+
+        // }
+        let trash = document.getElementsByClassName("trash");
+
+
+        function eventUpdate() {
+            trash = document.getElementsByClassName("trash");
+            Array.from(trash).forEach(function (trash) {
+                trash.addEventListener('click', function (event) {
+                    console.info(event.target.parentNode.id)
+                    $.post("/delete", { id: event.target.parentNode.id }, function (data, status) {
+                        if (status && !data.ok) {
+                            alert("there was some error!")
+                        } else {
+                            $("#cont").load(window.location.href + " #cont", function (res, stat) {
+                                return eventUpdate();
+                            })
+                        }
+                    });
+                });
             });
-
-        })
-
+        }
+        eventUpdate();
     </script>
 </body>
 
