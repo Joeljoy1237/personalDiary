@@ -4,7 +4,6 @@
   "description": "Personal Diary",
   "main": "app.js",
   "scripts": {
-    "start": "start chrome http://localhost:3000 & nodemon app.js"
   },
   "author": "Joel Joy",
   "license": "ISC",
