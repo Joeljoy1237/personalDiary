@@ -25,7 +25,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-joeljoy:joel1237@cluster0.tcura.mongodb.net/userDB?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGOOSE);
 
 const userSchema = new mongoose.Schema({
     name: String,
@@ -157,6 +157,6 @@ app.post("/delete", function (req, res) {
     });
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server running in port 3000");
 });

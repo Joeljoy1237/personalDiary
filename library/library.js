@@ -19,11 +19,6 @@ function cryptoEncrypt(text) {
     let encrypted = cipher.update(text);
     encrypted = Buffer.concat([encrypted, cipher.final()]);
     return iv.toString('hex') + ':' + encrypted.toString('hex');
-
-    // let mykey = crypto.createCipher('aes-128-cbc', process.env.PASSWORD);
-    // let mystr = mykey.update(str, 'utf8', 'hex')
-    // mystr += mykey.final('hex');
-    // return mystr
 }
 
 function cryptoDecrypt(text) {
@@ -34,13 +29,7 @@ function cryptoDecrypt(text) {
     let decrypted = decipher.update(encryptedText);
     decrypted = Buffer.concat([decrypted, decipher.final()]);
     return decrypted.toString();
-
-    // var mykey = crypto.createDecipher('aes-128-cbc', process.env.PASSWORD);
-    // var mystr = mykey.update(str, 'hex', 'utf8')
-    // mystr += mykey.final('utf8');
-    // return mystr
 }
-
 
 module.exports.dateNow = dateNow;
 module.exports.cryptoEncrypt = cryptoEncrypt;
