@@ -1,21 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
   font-family: "Open Sans", sans-serif;
-  color: white;
+  position: absolute;
+  width: 100%;
   overflow: hidden;
   background-image: url(../image/background.png);
   font-weight: 100;
 }
 
 #wel-form {
-  margin: 15% auto;
+  margin: 20% auto;
   width: fit-content;
 }
 
-.div-head{
-margin: 1.5%;
+.div-head {
+  position: absolute;
+  margin: 1.5%;
+  width: 100%;
 }
-.row{
+.row {
   justify-content: space-evenly;
   color: #b1b1b1;
 }
@@ -70,7 +77,7 @@ margin: 1.5%;
   background-color: #3f4961;
   padding: 10px;
 }
- .logo,
+.logo,
 .log,
 .sin {
   font-size: 1.8rem;
@@ -89,13 +96,30 @@ margin: 1.5%;
   color: white;
 }
 
-.active{
+.active {
   color: white;
   text-decoration: underline;
 }
-.alert{
+.alert {
   display: flex;
   justify-content: center;
   font-size: large;
   display: none;
+}
+@media screen and (max-width: 1200px) {
+  .col-9 {
+    width: 25%;
+  }
+  .col-1 {
+    width: 30%;
+  }
+  #wel-form {
+    margin: 50% auto;
+  }
+
+  .logo,
+  .log,
+  .sin {
+    font-size: 1.5rem;
+  }
 }
